@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Опросник</title>
+    <link rel="stylesheet" href="./quiz.css" />
+</head>
+
+<body>
+		<section id="quiz" class="quiz">
+			<div id="quizHeaderBg"></div>
+			<div class="quizWrapper">
+				<div class="progres">
+					<progress id="progresValue" value="10" max="100"></progress>
+				</div>
+				<div class="quizBox">
+					<div id="titleQuestion">Выберите вид услуги</div>
+					<div id="questions"></div>
+				</div>
+				<div class="btnWrapper">
+					<button class="prev" id="prev">Назад</button>
+					<button class="next" id="next">Далее</button>
+				</div>
+			</div>
+			<div id="quizFooterBg"></div>
+		</section>
+    <script src="./quiz.js"></script>
+</body>
+
+</html>
