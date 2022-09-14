@@ -5,34 +5,97 @@ const questionsData = {
         id: 1,
         type: "test",
         title: "Выберите тип недвижимости?",
-        answers: ["Апартаменты", "Квартира", "sadasd", "sadasd", "sadasd"],
+        answers: ["Апартаменты", "Квартира", "Дом", "Пентхаус", "Коммерция"],
       },
       {
         id: 2,
         type: "test",
         title: "Выберете расположение недвижимости?",
-        answers: ["Окраина", "Промежуточные Районы"],
+        answers: [
+          "Окраина",
+          "Промежуточные Районы",
+          "Центр",
+          "Правый Берег",
+          "Левый Берег (Центр)",
+          "Указать Конкретный Район",
+        ],
       },
       {
         id: 3,
-        type: "scroller",
-        title: " Какой у Вас бюджет?",
-        minScroll: 10000,
-        maxScroll: 30000,
+        type: "test",
+        title: "Предпочитаемый метраж?",
+        answers: [
+          "До 30 м2",
+          "До 50 м2",
+          "До 80 м2",
+          "До 120 м2",
+          "Свой Вариант",
+        ],
       },
       {
         id: 4,
-        type: "input",
-        title: "Что для Вас самое главное при выборе недвижимости?",
+        type: "scroller",
+        title: "Какой у Вас бюджет?",
+        minScroll: 4500,
+        maxScroll: 30000,
       },
       {
         id: 5,
         type: "test",
-        title: "Выберите тип недвижимости?",
-        answers: ["Апартаменты", "Квартира", "sadasd", "sadasd", "sadasd"],
+        title: "Укажите стандарт недвижимости?",
+        answers: ["Стандарт", "Бизнес", "Премиум", "Рассмотрю разные варианты"],
       },
       {
         id: 6,
+        type: "test",
+        title: "Желаемое К-во комнат?",
+        multiselect: true, // при добавлении будет появляться возможность мультивыбора
+        answers: [
+          "Однокомнатная",
+          "Двухкомнатная",
+          "Трехкомнатная",
+          "Четырехкомнатная",
+          "Свой Вариант",
+        ],
+      },
+      {
+        id: 7,
+        type: "test",
+        title: "Предпочитаемая этажность недвижимости?",
+        answers: [
+          "Первый Этаж",
+          "От 2 До 5",
+          "До 10",
+          "От 10",
+          "Не Принципиально",
+        ],
+      },
+      {
+        id: 8,
+        type: "test",
+        title: "На какой срок планируете арендовать недвижимость?",
+        answers: ["1 Год", "2 Года", "Свой Вариант"],
+      },
+      {
+        id: 8,
+        type: "test",
+        title: "Когда планируете арендовать недвижимость?",
+        answers: [
+          "Сегодня",
+          "На Протяжении 7 Дней",
+          "В Течении 2 Недель",
+          "В Следующем Месяце",
+          "Свой Выбор",
+        ],
+      },
+
+      {
+        id: 9,
+        type: "input",
+        title: "Что для Вас самое главное при выборе недвижимости?",
+      },
+      {
+        id: 7,
         title: "Оставь свои контакты",
         type: "form",
       },
@@ -53,17 +116,108 @@ const questionsData = {
           {
             id: 1,
             type: "test",
-            title: "Выберите тип недвижимости для покупки?",
-            answers: ["Апартаменты", "Квартира"],
+            title: "Выберете рынок недвижимости?",
+            answers: [
+              "Первичный Рынок",
+              "Вторичный Рынок",
+              "Рассмотрю разные варианты",
+            ],
           },
           {
             id: 2,
             type: "test",
-            title: "Выберете расположение недвижимости?",
-            answers: ["Окраина", "Промежуточные Районы"],
+            title: "Выберите тип недвижимости?",
+            answers: [
+              "Квартира",
+              "Дом",
+              "Коммерция",
+              "Апартаменты",
+              "Пентхаус",
+            ],
           },
           {
             id: 3,
+            type: "test",
+            title: "Выберите способ финансирования покупки недвижимости?",
+            answers: ["Собственные Средства", "Ипотека"],
+          },
+          {
+            id: 4,
+            type: "test",
+            title: "Выберете расположение недвижимости?",
+            answers: [
+              "Окраина",
+              "Промежуточные Районы",
+              "Центр",
+              "Левый Берег (Центр)",
+              "Указать Конкретный Район",
+            ],
+          },
+          {
+            id: 5,
+            type: "test",
+            title: "Какое к-во комнат Вы рассматриваете?",
+            answers: [
+              "Однокомнатная",
+              "Двухкомнатная",
+              "Трехкомнатная",
+              "Четырехкомнатная",
+              "Свой Вариант",
+            ],
+          },
+          {
+            id: 6,
+            type: "test",
+            title: "Предпочитаемый метраж?",
+            answers: [
+              "До 30 м2",
+              "До 50 м2",
+              "До 80 м2",
+              "До 120 м2",
+              "Свой Вариант",
+            ],
+          },
+          {
+            id: 7,
+            type: "scroller",
+            title: "Какой у Вас бюджет?",
+            minScroll: 70000,
+            maxScroll: 500000,
+          },
+          {
+            id: 8,
+            type: "test",
+            title: "Укажите стандарт недвижимости?",
+            answers: [
+              "С Ремонтом",
+              "Без Ремонта",
+              "С Мебелью",
+              "Без Мебели",
+              "Средний Стандарт",
+              "Бизнес Стандарт",
+              "Премиум Стандарт",
+            ],
+          },
+          {
+            id: 9,
+            type: "test",
+            title: "Когда планируете Совершить покупку?",
+            answers: [
+              "На Протяжении 7 Дней",
+              "В Течении 2 Недель",
+              "В Следующем Месяце",
+              "На Протяжении 6 Месяцев",
+              "Через Год",
+              "Свой Выбор",
+            ],
+          },
+          {
+            id: 10,
+            type: "input",
+            title: "Что для Вас самое главное при выборе недвижимости?",
+          },
+          {
+            id: 11,
             title: "Оставь свои контакты",
             type: "form",
           },
@@ -80,18 +234,6 @@ const questionsData = {
           },
           {
             id: 1,
-            type: "test",
-            title: "Выберите тип недвижимости для продажи?",
-            answers: ["Апартаменты", "Квартира"],
-          },
-          {
-            id: 2,
-            type: "test",
-            title: "Выберете расположение недвижимости?",
-            answers: ["Окраина", "Промежуточные Районы"],
-          },
-          {
-            id: 3,
             title: "Оставь свои контакты",
             type: "form",
           },
@@ -104,17 +246,6 @@ const questionsData = {
     questions: [
       {
         id: 1,
-        type: "test",
-        title: "Выберете расположение недвижимости?",
-        answers: ["Окраина", "Промежуточные Районы"],
-      },
-      {
-        id: 2,
-        type: "input",
-        title: "Что для Вас самое главное при выборе недвижимости?",
-      },
-      {
-        id: 2,
         type: "form",
       },
     ],
@@ -124,11 +255,6 @@ const questionsData = {
     questions: [
       {
         id: 1,
-        type: "input",
-        title: "Что для Вас самое главное при выборе недвижимости?",
-      },
-      {
-        id: 2,
         type: "form",
       },
     ],
@@ -191,7 +317,15 @@ function homePage() {
 }
 homePage();
 
-function renderQuiz({ id, title, type, answers, minScroll, maxScroll }) {
+function renderQuiz({
+  id,
+  title,
+  type,
+  answers,
+  minScroll,
+  maxScroll,
+  multiselect,
+}) {
   titleQuestion.innerHTML = title;
   switch (type) {
     case "test":
@@ -199,7 +333,7 @@ function renderQuiz({ id, title, type, answers, minScroll, maxScroll }) {
 			${answers
         .map(
           (answer) =>
-            `<div class="answersItem" id="answersItem" data-type="test" data-answer="${answer}" data-id="${id}">${answer}</div>`
+            `<div class="answersItem" id="answersItem" data-multiselect=${multiselect} data-type="test" data-answer="${answer}" data-id="${id}">${answer}</div>`
         )
         .join("")}`;
     case "scroller":
@@ -231,6 +365,7 @@ let activeAnswer = {
   id: null,
   key: "",
   answer: "",
+  answerMulti: [],
 };
 
 let activeId = 0;
@@ -258,11 +393,20 @@ document.addEventListener("click", (e) => {
       }
     }
   });
+
   answersItems.forEach((el) => {
-    el.classList.remove("animation");
-    if (self == el) {
-      if (!self.closest("animation")) {
+    if (el.dataset.multiselect == "true") {
+      if (self == el && self.classList.contains("animation")) {
+        self.classList.remove("animation");
+      } else if (self == el && !self.classList.contains("animation")) {
         self.classList.add("animation");
+      }
+    } else {
+      el.classList.remove("animation");
+      if (self == el) {
+        if (!self.closest("animation")) {
+          self.classList.add("animation");
+        }
       }
     }
   });
@@ -278,10 +422,21 @@ function scoreLength(length, activeId) {
   progresValue.value = step;
 }
 
-next.onclick = function (titleAnswer) {
+next.onclick = function () {
   const animation = document.querySelector(".animation");
   const formInputName = document.querySelector("#formInputName");
   const formInputTel = document.querySelector("#formInputTel");
+  const answersItems = document.querySelector(".answersItem");
+  const scroller = document.querySelector(".scroller");
+  if (answersItems) {
+    const animations = document.querySelectorAll(".animation");
+    let multiselect = [];
+    animations.forEach((el) => {
+      multiselect.push(el.dataset.answer);
+    });
+    answerData.push(multiselect);
+  }
+
   if (formInputName) {
     if (!formInputName.value == "" && !formInputTel.value == "") {
       render(flow, activeId + 1, activeAnswer.answer);
@@ -294,7 +449,9 @@ next.onclick = function (titleAnswer) {
       render(flow, activeId + 1, activeAnswer.answer);
       activeId++;
       RandArray(bgImgData);
-      answerData.push(activeAnswer.answer);
+      if (scroller) {
+        answerData.push(activeAnswer.answer);
+      }
     } else {
       render(flow, activeId);
       RandArray(bgImgData);
@@ -366,7 +523,6 @@ function render(key, activeId, answer = false) {
   }
   renderHandleForAnswers();
 }
-
 function renderHandleForAnswers() {
   const answersItems = document.querySelectorAll("#answersItem");
   const scroller = document.querySelector("#scroller");
